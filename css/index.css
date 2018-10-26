@@ -219,14 +219,18 @@ body .container .timerBox .controlButtons {
     justify-content: space-evenly;
   }
 }
-body .container .timerBox .controlButtons img {
+body .container .timerBox .controlButtons button {
+  background-color: transparent;
+  border: none;
+}
+body .container .timerBox .controlButtons button img {
   height: 70px;
 }
-body .container .timerBox .controlButtons img:hover {
+body .container .timerBox .controlButtons button img:hover {
   cursor: pointer;
 }
 @media (max-width: 500px) {
-  body .container .timerBox .controlButtons img {
+  body .container .timerBox .controlButtons button img {
     height: 60px;
   }
 }
