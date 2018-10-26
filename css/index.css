@@ -193,6 +193,11 @@ body .container .timerBox .digits .digit {
   font-size: 8rem;
   padding: 5px;
 }
+@media (max-width: 500px) {
+  body .container .timerBox .digits .digit {
+    font-size: 6rem;
+  }
+}
 body .container .timerBox .controlButtons {
   display: flex;
   flex-direction: column;
@@ -210,7 +215,8 @@ body .container .timerBox .controlButtons {
 @media (max-width: 500px) {
   body .container .timerBox .controlButtons {
     order: 2;
-    width: auto;
+    width: 50%;
+    justify-content: space-evenly;
   }
 }
 body .container .timerBox .controlButtons img {
@@ -218,6 +224,11 @@ body .container .timerBox .controlButtons img {
 }
 body .container .timerBox .controlButtons img:hover {
   cursor: pointer;
+}
+@media (max-width: 500px) {
+  body .container .timerBox .controlButtons img {
+    height: 60px;
+  }
 }
 body .container .form-row {
   padding: 5px;
