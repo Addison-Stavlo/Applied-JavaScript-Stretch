@@ -9,7 +9,30 @@
 
   </head>
   <body>
-      <div class="activity">Work Time! Session#1</div>
+
+  <div class="container">
+
+
+    <div class="activity">Work Time! Session#1</div>
+
+    <div class='form-row'>
+        <label for='workDuration'>Work Session Duration:</label>
+        <select id='workDuration' name='workDuration'>
+          <option value=25>25min</option>
+          <option value=15>15min</option>
+          <option value=20>20min</option>
+          <option value=25>25min</option>
+          <option value=30>30min</option>
+        </select>
+    </div>
+    
+    <div class="timerBox">
+      <div class="controlButtons">
+          <!-- <button class="startButton controlBtn">Start</button>
+          <button class="nextButton controlBtn">Next</button> -->
+          <img src="assets/play.svg" alt="" class="startButton">
+          <img src="assets/next.svg" alt="" class="nextButton">
+        </div>
     <div class="digits">
       <div class="digit" id="minuteTens">-</div>
       <div class="digit" id="minuteOnes">-</div>
@@ -18,39 +41,35 @@
       <div class="digit" id="secondOnes">-</div>
     </div>
     <div class="controlButtons">
-      <button class="startButton controlBtn">Start</button>
-      <button class="nextButton controlBtn">Next</button><br>
-      <button class="pauseButton controlBtn">Pause</button>
-      <button class="resetButton controlBtn">Reset</button>
+      <!-- <button class="pauseButton controlBtn">Pause</button>
+      <button class="resetButton controlBtn">Reset</button> -->
+      <img src="assets/pause.svg" alt="" class="pauseButton">
+      <img src="assets/undo.svg" alt="" class="resetButton">
     </div>
-    <div class='form-row'>
-        <label for='workDuration'>Work Session Duration:</label>
-        <select id='workDuration' name='workDuration'>
-          <option value=.3>1min</option>
+  </div>
+
+
+  <div class='form-row'>
+      <label for='breakDuration'>Short Break Duration:</label>
+      <select id='breakDuration' name='breakDuration'>
+        <option value=5>5min</option>
+        <option value=3>3min</option>
+        <option value=4>4min</option>
+        <option value=5>5min</option>
+        <option value=6>6min</option>
+        <option value=6>6min</option>
+      </select>
+  </div>
+  <div class='form-row'>
+      <label for='longBreakDuration'>Long Break Duration:</label>
+      <select id='longBreakDuration' name='longBreakDuration'>
+          <option value=25>25min</option>
           <option value=15>15min</option>
           <option value=20>20min</option>
           <option value=25>25min</option>
           <option value=30>30min</option>
-        </select>
-    </div>
-    <div class='form-row'>
-        <label for='breakDuration'>Short Break Duration:</label>
-        <select id='breakDuration' name='breakDuration'>
-          <option value=3>3min</option>
-          <option value=4>4min</option>
-          <option value=5>5min</option>
-          <option value=6>6min</option>
-          <option value=6>6min</option>
-        </select>
-    </div>
-    <div class='form-row'>
-        <label for='longBreakDuration'>Long Break Duration:</label>
-        <select id='longBreakDuration' name='longBreakDuration'>
-            <option value=15>15min</option>
-            <option value=20>20min</option>
-            <option value=25>25min</option>
-            <option value=30>30min</option>
-        </select>
-    </div>
+      </select>
+  </div>
+  </div>
   </body>
 </html>

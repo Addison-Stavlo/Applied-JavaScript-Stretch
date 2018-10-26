@@ -3,6 +3,7 @@ let min25 = 25*60*1000;
 let min5 = 5*60*1000;
 let numBreak = 0;
 let isPaused = false;
+const alarmSound = new Audio('assets/alarmSound.mp3');
 
 let counter;
 
@@ -51,6 +52,7 @@ function displayTime() {
         secondTens.textContent = '0';
         secondOnes.textcontent = '0';
         digits.style.color = 'red';
+        alarmSound.play();
         // minuteTens.style.color = 'red';
         // minuteOnes.style.color = 'red';
         // secondTens.style.color = 'red';
@@ -60,6 +62,7 @@ function displayTime() {
 // add buttons! ------------------------------------
 startButton.addEventListener("click",startTimer);
 function startTimer(){
+    alarmSound.pause();
     if(activity.classList.contains('break')){
         if(numBreak%4 === 0){
             time = Number(longBreakDropdown.value)*60*1000;
@@ -80,6 +83,7 @@ function startTimer(){
 const pauseButton = document.querySelector('.pauseButton');
 pauseButton.addEventListener('click',pause);
 function pause(){
+    alarmSound.pause();
     if(!isPaused){
         clearInterval(counter);
         isPaused = true;
@@ -94,6 +98,7 @@ function pause(){
 
 nextButton.addEventListener("click",nextTimer);
 function nextTimer(){
+    alarmSound.pause();
     clearInterval(counter);
     time = 0;
     digits.style.color = 'black';
@@ -114,6 +119,7 @@ function nextTimer(){
 
 resetButton.addEventListener("click",resetTimer)
 function resetTimer(){
+    alarmSound.pause();
     clearInterval(counter);
     time = 0;
     digits.style.color = 'black';
