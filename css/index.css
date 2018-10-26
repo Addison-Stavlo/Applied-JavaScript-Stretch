@@ -126,28 +126,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-@keyframes opacity-animation {
-  0% {
-    opacity: 1;
-    transform: rotate(0deg);
-  }
-  25% {
-    opacity: 0.75;
-    transform: rotate(-1deg);
-  }
-  50% {
-    opacity: 0.5;
-    transform: rotate(-2deg);
-  }
-  75% {
-    opacity: 0.75;
-    transform: rotate(-1deg);
-  }
-  100% {
-    opacity: 1;
-    transform: rotate(0deg);
-  }
-}
 html {
   height: 100%;
 }
@@ -171,6 +149,17 @@ body .container {
 }
 body .container .activity {
   font-size: 4rem;
+  display: flex;
+}
+@media (max-width: 800px) {
+  body .container .activity {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 500px) {
+  body .container .activity {
+    font-size: 2.5rem;
+  }
 }
 body .container .timerBox {
   display: flex;
@@ -178,10 +167,26 @@ body .container .timerBox {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 800px) {
+  body .container .timerBox {
+    flex-direction: column;
+  }
+}
+@media (max-width: 500px) {
+  body .container .timerBox {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
 body .container .timerBox .digits {
   border-radius: 30px;
   margin-bottom: 15px;
   padding: 20px;
+}
+@media (max-width: 800px) {
+  body .container .timerBox .digits {
+    margin-bottom: 0;
+  }
 }
 body .container .timerBox .digits .digit {
   display: inline-block;
@@ -194,23 +199,19 @@ body .container .timerBox .controlButtons {
   justify-content: space-around;
   height: 200px;
 }
-body .container .timerBox .controlButtons .controlBtn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.6rem;
-  background: black;
-  color: white;
-  width: 90px;
-  height: 40px;
-  border-radius: 10px;
+@media (max-width: 800px) {
+  body .container .timerBox .controlButtons {
+    flex-direction: row;
+    height: auto;
+    width: 300px;
+    justify-content: space-between;
+  }
 }
-body .container .timerBox .controlButtons .controlBtn:hover {
-  cursor: pointer;
-  animation-name: opacity-animation;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  border: 5px solid #FDED2A;
+@media (max-width: 500px) {
+  body .container .timerBox .controlButtons {
+    order: 2;
+    width: auto;
+  }
 }
 body .container .timerBox .controlButtons img {
   height: 70px;
@@ -226,13 +227,29 @@ body .container .form-row {
 body .container .form-row label {
   font-size: 2rem;
 }
+@media (max-width: 500px) {
+  body .container .form-row label {
+    font-size: 1.6rem;
+  }
+}
 body .container .form-row select {
   font-size: 1.5rem;
   background-color: transparent;
   border: 1px solid black;
   border-radius: 7px;
 }
+@media (max-width: 500px) {
+  body .container .form-row select {
+    font-size: 1.3rem;
+  }
+}
 body .container .form-row select option {
   font-size: 1.5rem;
   background: orange;
+  border-radius: 20px;
+}
+@media (max-width: 500px) {
+  body .container .form-row select option {
+    font-size: 1.3rem;
+  }
 }

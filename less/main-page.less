@@ -3,9 +3,6 @@ html {
 }
 
 body {
-    // background: @radialGradient;
-    // background-repeat: no-repeat;
-    // background-position: center center;
     background: @radialGradient;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -25,19 +22,34 @@ body {
     
   .activity{
     font-size: 4rem;
-    // margin: 100px 0 50px;
+    display: flex;
+    @media @tablet {
+      font-size: 3rem;
+    }
+    @media @mobile {
+      font-size: 2.5rem;
+    }
   }
   .timerBox{
     display: flex;
     width: 80%;
     justify-content: center;
     align-items: center;
+    @media @tablet {
+      flex-direction: column;
+    }
+    @media @mobile {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
 
     .digits {
-      // border: 2px solid black;
       border-radius: 30px;
       margin-bottom: 15px;
       padding: 20px;
+      @media @tablet {
+        margin-bottom: 0;
+      }
   
       .digit {
         display: inline-block;
@@ -50,10 +62,17 @@ body {
       flex-direction: column;
       justify-content: space-around;
       height: 200px;
-  
-      .controlBtn {
-        .button-style-1(90px);
+      @media @tablet{
+        flex-direction: row;
+        height: auto;
+        width: 300px;
+        justify-content: space-between;
       }
+      @media @mobile {
+        order: 2;
+        width: auto;
+      }
+
       img {
         height: 70px;
         &:hover {
@@ -67,25 +86,33 @@ body {
 
 
   .form-row {
-    // border: 1px solid black;
     padding: 5px;
     margin: 15px 0;
     border-radius: 10px;
     label {
       font-size: 2rem;
+      @media @mobile {
+        font-size: 1.6rem;
+      }
     }
     select {
       font-size: 1.5rem;
       background-color: transparent;
       border: 1px solid black;
       border-radius: 7px;
+      @media @mobile {
+        font-size: 1.3rem;
+      }
 
       option {
         font-size: 1.5rem;
         background: orange;
+        border-radius: 20px;
+        @media @mobile {
+          font-size: 1.3rem;
+        }
       }
     }
-
   }
 }
 }
